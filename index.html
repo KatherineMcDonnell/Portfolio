@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katherine McDonnell | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div id="home" class="tab-pane active">
+<body>
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <p class="logo">km</div>
+            <ul class="nav-tabs">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="mailto:krmcd33@gmail.com">Contact</a></li>
+                <li><a href="#about1">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Homepage Content -->
+    <div class="Home">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="circles-part">
+                    <div class="parallax-container">
+                        <div class="circle circle-1" data-speed="0.02"></div>
+                        <div class="circle circle-2" data-speed="0.04"></div>
+                        <div class="circle circle-3" data-speed="0.03"></div>
+                        <div class="circle circle-4" data-speed="0.05"></div>
+                    </div>
+                </div>
+                <div class="text-part">
+                    <h1>KATHERINE MCDONNELL</h1>
+                    <h2>Curiosity. Experimentation. Innovation</h2>
+                    <a href="projects.html" class="btn">Explore Projects</a>
+                </div>
+            </div>
+    
+                <script>
+                 document.addEventListener('DOMContentLoaded', function() {
+                     const circles = document.querySelectorAll('.circle');
+                     const container = document.querySelector('.parallax-container');
+                    
+                        // Initial position offset for natural look
+                        circles.forEach(circle => {
+                          const randomX = (Math.random() - 0.5) * 20;
+                            const randomY = (Math.random() - 0.5) * 20;
+                            circle.style.transform = `translate(${randomX}px, ${randomY}px)`;
+                        });
+                    
+                        // Mouse parallax effect
+                        document.addEventListener('mousemove', function(e) {
+                            const containerRect = container.getBoundingClientRect();
+                            const containerCenterX = containerRect.left + containerRect.width / 2;
+                            const containerCenterY = containerRect.top + containerRect.height / 2;
+                        
+                            const mouseX = e.clientX;
+                            const mouseY = e.clientY;
+                        
+                            circles.forEach(circle => {
+                                const speed = parseFloat(circle.getAttribute('data-speed'));
+                            
+                                const offsetX = (containerCenterX - mouseX) * speed;
+                                const offsetY = (containerCenterY - mouseY) * speed;
+                            
+                                circle.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+                            });
+                        });
+                    
+                        // Touch support for mobile
+                        document.addEventListener('touchmove', function(e) {
+                            if (e.touches.length > 0) {
+                                const containerRect = container.getBoundingClientRect();
+                                const containerCenterX = containerRect.left + containerRect.width / 2;
+                                const containerCenterY = containerRect.top + containerRect.height / 2;
+                            
+                                const touchX = e.touches[0].clientX;
+                                const touchY = e.touches[0].clientY;
+                            
+                                circles.forEach(circle => {
+                                    const speed = parseFloat(circle.getAttribute('data-speed'));
+                                
+                                    const offsetX = (containerCenterX - touchX) * speed;
+                                    const offsetY = (containerCenterY - touchY) * speed;
+                                
+                                    circle.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+                                });
+                            }
+                        });
+                    });
+                </script>
+            </div>
+
+    
+               
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects">
+            <div class="container">
+                <h3 class="section-title">PROJECTS</h3>
+                <div class="project-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <a href="gardens.html">
+                            <img src="sunrise game map.jpg" alt="Gardens of New Amsterdam">
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <h3>Gardens of New Amsterdam</h3>
+                            <p>Product Management and Design</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="teryn thorngrasp.jpg" alt="3D Character Modeling">
+                        </div>
+                        <div class="project-info">
+                            <h3>3-D Modeling</h3>
+                            <p>Character Design and Story</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <a href="ships.html"> 
+                            <img src="halve maen high qaulity.jpg" alt="Henry Hudson's Half Moon">
+                            </a>
+                        </div>
+                        <div class="project-info">
+                            <h3>Ships of the Revolution</h3>
+                            <p>Research and Design</p>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="Daily NU.png" alt="The Daily Northwestern">
+                        </div>
+                        <div class="project-info">
+                            <h3>Published Works</h3>
+                            <p>Journalistic Research and Writing</p>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="scno logo.jpeg" alt="Consulting Case Study">
+                        </div>
+                        <div class="project-info">
+                            <h3>Consulting Case Study</h3>
+                            <p>Research and Strategy</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about" id="about1">
+            <div class="container">
+                <div class="about-content" class_>
+                    <div class="about-image">
+                        <img src="Headshot.jpeg" alt="Katherine McDonnell">
+                    </div>
+                    <div class="about-text">
+                        <h2>About me</h2>
+                        <p>Hi there. I’m Katherine.</p>
+                        <p>I thrive at the crossroads of curiosity and analysis, seeking to see how far I can push the envelope to make 
+                            fresh and intriguing products. I’m particularly interested in tech softwares and hardwares, but also love to
+                             tinker in other fields. I'm currently a senior at Northwestern University bridging studies in business, psychology, and product design.</p> 
+                            
+                        <p> One thing you can count on me to talk about for hours is: GPUs - what's with ray-tracing and AI, anyway? 
+                            But, beyond that, I'm a cartography lover who draws maps in my free time. What's more?
+                             I'm currently working with a team to build a historically accurate immersive virtual map of Manhattan throughout history.</p>
+                        <p> Want to share your story? Reach out here. </p>
+                        <a href="mailto:krmcd33@gmail.com" class="btn">Contact Me</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">Katherine McDonnell</div>
+                <div class="footer-text">© 2025 All Rights Reserved</div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+    <!-- Additional tab content (these would be shown/hidden via JavaScript in a real implementation) -->
+    
+    
+    <div class="timewalk-ships-content" style="display: none;">
+        <div class="container">
+            <div class="timewalk-intro">
+                <h2>TimeWalk: Ships Through History</h2>
+                <p>This project explores the evolution of maritime vessels from ancient galleys to modern container ships.</p>
+            </div>
+            
+            <div class="timewalk-grid">
+                <div class="timewalk-image">
+                    <img src="/api/placeholder/400/320" alt="Historical Ships">
+                </div>
+                <div class="timewalk-text">
+                    <h3>The Age of Sail</h3>
+                    <p>From the 16th to the 19th century, sailing ships dominated maritime trade and naval warfare. This visualization recreates historically accurate models of ships from this era.</p>
+                    <p>Based on naval architectural plans from maritime museums and historical records, these models showcase the evolution of ship design and seafaring technology.</p>
+                </div>
+            </div>
+            
+            <div class="historic-map">
+                <h3>Port of Charleston: 1783</h3>
+                <div class="map-image">
+                    <img src="/api/placeholder/400/320" alt="Historical Harbor Map">
+                </div>
+                <p>This detailed recreation of Charleston Harbor in 1783 shows the bustling maritime activity during the early years of American independence, with accurate ship models based on historical records.</p>
+            </div>
+            
+            <div class="timewalk-grid">
+                <div class="timewalk-text">
+                    <h3>Industrial Era Vessels</h3>
+                    <p>The transition from sail to steam power revolutionized maritime transportation. This series explores the technological advancements of 19th and early 20th century ships.</p>
+                    <p>Using engineering documents and photographs from maritime archives, these models demonstrate the industrial evolution of seafaring vessels.</p>
+                </div>
+                <div class="timewalk-image">
+                    <img src="/api/placeholder/400/320" alt="Industrial Ships">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modeling-content" style="display: none;">
+        <div class="container">
+            <div class="timewalk-intro">
+                <h2>3D Character Modeling</h2>
+                <p>A showcase of character design and modeling for games and interactive media.</p>
+            </div>
+            
+            <div class="modeling-grid">
+                <div class="modeling-card">
+                    <h3>Medieval Characters</h3>
+                    <div class="modeling-image">
+                        <img src="/api/placeholder/400/320" alt="Medieval Character">
+                    </div>
+                    <p>Series of historically accurate character models for an educational game about medieval European village life.</p>
+                    <div class="character-samples">
+                        <div class="character-sample">
+                            <img src="/api/placeholder/400/320" alt="Character 1">
+                        </div>
+                        <div class="character-sample">
+                            <img src="/api/placeholder/400/320" alt="Character 2">
+                        </div>
+                        <div class="character-sample">
+                            <img src="/api/placeholder/400/320" alt="Character 3">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="modeling-card">
+                    <h3>Fantasy Creatures</h3>
+                    <div class="modeling-image">
+                        <img src="/api/placeholder/400/320" alt="Fantasy Creature">
+                    </div>
+                    <p>Original character designs for an indie fantasy game project, featuring unique creatures and humanoid characters.</p>
+                    <div class="character-samples">
+                        <div class="character-sample">
+                            <img src="/api/placeholder/400/320" alt="Creature 1">
+                        </div>
+                        <div class="character-sample">
+                            <img src="/api/placeholder/400/320" alt="Creature 2">
+                        </div>
+                        <div class="character-sample">
+                            <img src="/api/placeholder/400/320" alt="Creature 3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gallery" style="margin-top: 40px;">
+                <h2 class="section-title">Model Gallery</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="/api/placeholder/400/320" alt="3D Model 1">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/api/placeholder/400/320" alt="3D Model 2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/api/placeholder/400/320" alt="3D Model 3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/api/placeholder/400/320" alt="3D Model 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Note: In a real implementation, you would need JavaScript to handle tab switching -->
+    <script>
+        // This would be expanded in a real implementation to handle tab switching
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-tabs a');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+
+                    if (text === 'Projects') return;
+                    
+                    e.preventDefault();
+                    
+                    // Remove active class from all links
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    
+                    // Add active class to clicked link
+                    this.classList.add('active');
+                    
+                    // Hide all content sections
+                    document.querySelector('.homepage-content').style.display = 'none';
+                    document.querySelector('.project-content').style.display = 'none';
+                    document.querySelector('.about').style.display = 'none';
+                    document.querySelector('.contact').style.display = 'none';
+                    
+                    // Show relevant content based on clicked tab
+                    const text = this.textContent.trim();
+                    if (text === 'Home') {
+                        document.querySelector('.homepage-content').style.display = 'block';
+                    } else if (text === 'Projects') {
+                        document.querySelector('.project-content').style.display = 'block';
+                    } else if (text === 'About') {
+                        document.querySelector('.about').style.display = 'block';
+                    } else if (text === 'Contact) 
+                        document.querySelector('.contact').style.display = 'block';
+                    }
+                });
+            });
+            
+            // Set homepage content as visible by default
+            document.querySelector('.homepage-content').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
