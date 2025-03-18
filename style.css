@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;700&display=swap');
+
 {
     margin: 0;
     padding: 0;
@@ -47,24 +47,39 @@ header {
     padding: 0px 25px;
     margin-bottom: 0px;
     position: sticky;
-    text-align: center;
+    top: 0;
     z-index: 1000;
     display: flex;
     align-items: center;
-    }
-    
+    justify-content: space-between; /* This creates space between child elements */
+    width: 100%; /* Ensure it spans the full width */
+}
+
+/* Container for the logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .logo {
     font-size: 24px;
-    margin-left: 0px;
-    justify-content: left;
-    font-weight: bold;
+    font-weight: 600;
     color: #fffafa;
 }
+
+/* Container for the navigation tabs */
+.nav-container {
+    margin-left: auto; /* This pushes the nav to the right */
+}
+
 .nav-tabs {
     display: flex;
     list-style: none;
     gap: 30px;
-    justify-content: center;
+    margin-right: 20px;
+    padding: 0;
 }
 
 .nav-tabs li a {
@@ -643,6 +658,7 @@ h3 {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Prevents horizontal scrollbars */
+    overflow-y: visible;
   }
 
   .container-flex {
